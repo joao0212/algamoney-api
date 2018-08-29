@@ -1,0 +1,1 @@
+ALTER TABLE pessoa CHANGE telefone telefone VARCHAR(20) NOT NULL

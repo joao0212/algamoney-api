@@ -1,0 +1,11 @@
+INSERT INTO categoria (nome) values ('Aluguel/condomínio');
+INSERT INTO categoria (nome) values ('Iptu');
+INSERT INTO categoria (nome) values ('Luz');
+INSERT INTO categoria (nome) values ('Telefone');
+INSERT INTO categoria (nome) values ('Internet');
+INSERT INTO categoria (nome) values ('Pagamento de funcionário');
+INSERT INTO categoria (nome) values ('Pagamento de professor');
+INSERT INTO categoria (nome) values ('Supermercado');
+INSERT INTO categoria (nome) values ('Investimento inicial');
+INSERT INTO categoria (nome) values ('Treinamentos e cursos');
+INSERT INTO categoria (nome) values ('Manutenção');

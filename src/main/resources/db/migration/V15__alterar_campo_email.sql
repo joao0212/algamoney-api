@@ -1,0 +1,1 @@
+ALTER TABLE pessoa CHANGE email email VARCHAR(50) NOT NULL

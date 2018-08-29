@@ -21,7 +21,6 @@ public class LancamentoService {
 
 	public Lancamento salvar(Lancamento lancamento) {
 		validarPessoa(lancamento);
-
 		return lancamentoRepository.save(lancamento);
 	}
 

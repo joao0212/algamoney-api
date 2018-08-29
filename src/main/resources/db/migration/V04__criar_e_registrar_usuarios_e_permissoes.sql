@@ -20,7 +20,8 @@ CREATE TABLE usuario_permissao (
 
 INSERT INTO usuario (codigo, nome, email, senha) values (1, 'Administrador', 'admin@algamoney.com', '$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.');
 INSERT INTO usuario (codigo, nome, email, senha) values (2, 'Maria Silva', 'maria@algamoney.com', '$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq');
-
+INSERT INTO usuario (codigo, nome, email, senha) values (3, 'Marcelo', 'marceloalvarenga19@gmail.com', '$2a$04$fm2tDk3CxvGH4T3mdLPt6OVdcwRfFvjv6POPYs3/TSIDRNAAgXYdK');
+ 
 INSERT INTO permissao (codigo, descricao) values (1, 'ROLE_CADASTRAR_CATEGORIA');
 INSERT INTO permissao (codigo, descricao) values (2, 'ROLE_PESQUISAR_CATEGORIA');
 
@@ -46,3 +47,14 @@ INSERT INTO usuario_permissao (codigo_usuario, codigo_permissao) values (1, 8);
 INSERT INTO usuario_permissao (codigo_usuario, codigo_permissao) values (2, 2);
 INSERT INTO usuario_permissao (codigo_usuario, codigo_permissao) values (2, 5);
 INSERT INTO usuario_permissao (codigo_usuario, codigo_permissao) values (2, 8);
+
+-- marcelo
+-- admin
+INSERT INTO usuario_permissao (codigo_usuario, codigo_permissao) values (3, 1);
+INSERT INTO usuario_permissao (codigo_usuario, codigo_permissao) values (3, 2);
+INSERT INTO usuario_permissao (codigo_usuario, codigo_permissao) values (3, 3);
+INSERT INTO usuario_permissao (codigo_usuario, codigo_permissao) values (3, 4);
+INSERT INTO usuario_permissao (codigo_usuario, codigo_permissao) values (3, 5);
+INSERT INTO usuario_permissao (codigo_usuario, codigo_permissao) values (3, 6);
+INSERT INTO usuario_permissao (codigo_usuario, codigo_permissao) values (3, 7);
+INSERT INTO usuario_permissao (codigo_usuario, codigo_permissao) values (3, 8);

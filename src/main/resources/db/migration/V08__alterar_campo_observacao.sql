@@ -1,0 +1,1 @@
+ALTER TABLE lancamento CHANGE observacao observacao VARCHAR(255) NULL
