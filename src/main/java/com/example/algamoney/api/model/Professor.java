@@ -1,7 +1,5 @@
 package com.example.algamoney.api.model;
 
-import java.time.LocalDate;
-import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,8 +12,8 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name = "pessoa")
-public class Pessoa {
+@Table(name = "professor")
+public class Professor {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,28 +27,6 @@ public class Pessoa {
 
 	@NotNull
 	private Boolean ativo;
-
-	@NotNull
-	private String rg;
-
-	@NotNull
-	private String cpf;
-
-	@NotNull
-	private String telefone;
-
-	@NotNull
-	@Column(name = "data_nascimento")
-	private LocalDate dataNascimento;
-
-	@NotNull
-	private String plano;
-
-	@NotNull
-	private String matricula;
-
-	@NotNull
-	private String email;
 
 	public Long getCodigo() {
 		return codigo;
@@ -90,67 +66,11 @@ public class Pessoa {
 		return !this.ativo;
 	}
 
-	public String getRg() {
-		return rg;
-	}
-
-	public void setRg(String rg) {
-		this.rg = rg;
-	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-
-	public String getTelefone() {
-		return telefone;
-	}
-
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
-
-	public LocalDate getDataNascimento() {
-		return dataNascimento;
-	}
-
-	public void setDataNascimento(LocalDate dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
-
-	public String getPlano() {
-		return plano;
-	}
-
-	public void setPlano(String plano) {
-		this.plano = plano;
-	}
-
-	public String getMatricula() {
-		return matricula;
-	}
-
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+		result = prime * result + ((ativo == null) ? 0 : ativo.hashCode());
 		return result;
 	}
 
@@ -162,13 +82,12 @@ public class Pessoa {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Pessoa other = (Pessoa) obj;
-		if (codigo == null) {
-			if (other.codigo != null)
+		Professor other = (Professor) obj;
+		if (ativo == null) {
+			if (other.ativo != null)
 				return false;
-		} else if (!codigo.equals(other.codigo))
+		} else if (!ativo.equals(other.ativo))
 			return false;
 		return true;
 	}
-
 }

@@ -14,8 +14,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "lancamento")
-public class Lancamento {
+@Table(name = "despesa")
+public class Despesa {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,8 +37,8 @@ public class Lancamento {
 	private String observacao;
 
 	@ManyToOne
-	@JoinColumn(name = "codigo_pessoa")
-	private Pessoa pessoa;
+	@JoinColumn(name = "codigo_categoria")
+	private Categoria categoria;
 
 	public Long getCodigo() {
 		return codigo;
@@ -88,19 +88,19 @@ public class Lancamento {
 		this.observacao = observacao;
 	}
 
-	public Pessoa getPessoa() {
-		return pessoa;
+	public Categoria getCategoria() {
+		return categoria;
 	}
 
-	public void setPessoa(Pessoa pessoa) {
-		this.pessoa = pessoa;
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+		result = prime * result + ((categoria == null) ? 0 : categoria.hashCode());
 		return result;
 	}
 
@@ -112,13 +112,13 @@ public class Lancamento {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Lancamento other = (Lancamento) obj;
-		if (codigo == null) {
-			if (other.codigo != null)
+		Despesa other = (Despesa) obj;
+		if (categoria == null) {
+			if (other.categoria != null)
 				return false;
-		} else if (!codigo.equals(other.codigo))
+		} else if (!categoria.equals(other.categoria))
 			return false;
 		return true;
 	}
-
 }
+
